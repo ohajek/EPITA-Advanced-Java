@@ -8,7 +8,6 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<bean id="daoIdentity" name="daoIdentity" class="fr.epita.iam.services.IdentityDAO" />
-	<bean id="daoAddress" name="daoAddress" class="fr.epita.iam.services.AddressDAO"/>
 
 	<context:annotation-config />
 	<context:component-scan base-package="fr.epita.iam.services" />

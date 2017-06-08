@@ -18,6 +18,13 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 import fr.epita.iam.models.Identity;
 import fr.epita.iam.services.Dao;
 
+/**
+ * Servlet that redirects from SEARCH page onto MODIFY page.
+ * If none is selected, the method ends. Otherwise, the user is
+ * redirected onto the MODIFY page with filled in fields to modify.
+ * @author ohajek
+ *
+ */
 @WebServlet(name="UpdateServlet", urlPatterns={"/update"})
 public class UpdateServlet extends HttpServlet {
 	

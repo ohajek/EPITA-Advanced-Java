@@ -13,6 +13,12 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import fr.epita.iam.models.Identity;
 
+/**
+ * Singleton class for authenticating the user
+ * when logging into the application.
+ * @author ohajek
+ *
+ */
 public class Authenticate {
 
 	@Autowired
@@ -25,6 +31,10 @@ public class Authenticate {
 	protected Authenticate() {
 	}
 	
+	/**
+	 * Method for getting the singleton instance
+	 * @return Instance of class Authenticate
+	 */
 	public static Authenticate getInstance() {
 		if(instance == null) {
 			instance = new Authenticate();
@@ -33,6 +43,15 @@ public class Authenticate {
 		return instance;
 	}
 	
+	/**
+	 * Method that authenticates the user while logging
+	 * into the database. It checks his username and password
+	 * with the database. It also checks if the user is admin type.
+	 * If not, he is not authenticated.
+	 * @param username	Username of user trying to log in
+	 * @param password	Password of user trying to log in
+	 * @return	Returns Identity object of use trying to log in. Null otherwise.
+	 */
 	public Identity authenticate(String username, String password) {
 		
 		SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);

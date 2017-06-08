@@ -6,7 +6,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+/**
+ * This class represents user in database. It uses Hibernate
+ * to map this class into out relation database.s
+ * @author ohajek
+ *
+ */
 @Entity
 @Table(name="IDENTITIES")
 public class Identity {
@@ -34,11 +39,22 @@ public class Identity {
 	@Column(name="USER_TYPE")
 	private String userType;
 	
-	//Default
+	/**
+	 * Default constructor
+	 */
 	public Identity(){
 		
 	}
 	
+	/**
+	 * Parametrized constructor
+	 * @param uid			Users id
+	 * @param displayname	Users name
+	 * @param email			Users email
+	 * @param birthDate		Users date of birth
+	 * @param password		Users password
+	 * @param userType		Type of user (admin/user)
+	 */
 	public Identity(String uid, String displayname, String email, String birthDate, String password, String userType) {
 		
 		this.uid = uid;

@@ -11,6 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * Servlet for logging out user. It clears the
+ * session and redirects onto the login page.
+ * @author ohajek
+ *
+ */
 @WebServlet(name="LogoutServlet", urlPatterns={"/logout"})
 public class LogoutServlet extends HttpServlet {
 

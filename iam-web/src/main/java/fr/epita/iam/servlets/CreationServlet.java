@@ -17,6 +17,14 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 import fr.epita.iam.models.Identity;
 import fr.epita.iam.services.Dao;
 
+/**
+ * Servlet for creating new user and writing him
+ * into the database. If successful, it redirects user
+ * onto the welcome page and shows him a message that
+ * the operation was successfully completed.
+ * @author ohajek
+ *
+ */
 @WebServlet(name="CreationServlet", urlPatterns={"/creation"})
 public class CreationServlet extends HttpServlet {
 	

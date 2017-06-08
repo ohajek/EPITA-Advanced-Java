@@ -18,6 +18,13 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 import fr.epita.iam.models.Identity;
 import fr.epita.iam.services.Dao;
 
+/**
+ * Servlet for searching the database based on given string.
+ * This string can be anything, username date of births etc.
+ * It also searches for substrings in Identity fields.
+ * @author ohajek
+ *
+ */
 @WebServlet(name="SearchServlet", urlPatterns={"/search"})
 public class SearchServlet extends HttpServlet {
 	

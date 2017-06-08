@@ -20,7 +20,13 @@ import fr.epita.iam.models.Identity;
 import fr.epita.iam.services.Authenticate;
 import fr.epita.iam.services.Dao;
 
-
+/**
+ * Servlet for authenticating the user.
+ * If the user is authenticated, he is redirected
+ * onto the welcome page.
+ * @author ohajek
+ *
+ */
 @WebServlet(name="AuthenticationServlet", urlPatterns={"/authenticate"})
 public class AuthenticationServlet extends HttpServlet{
 

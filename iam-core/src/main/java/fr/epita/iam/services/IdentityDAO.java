@@ -15,6 +15,11 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import fr.epita.iam.models.Identity;
 
+/**
+ * Class implementing the DAO interface for managing Identities in database
+ * @author ohajek
+ *
+ */
 public class IdentityDAO implements Dao<Identity>{
 	
 	private static final Logger LOGGER = LogManager.getLogger(IdentityDAO.class);

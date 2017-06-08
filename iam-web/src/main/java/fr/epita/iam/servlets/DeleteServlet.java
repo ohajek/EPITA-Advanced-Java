@@ -18,6 +18,16 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 import fr.epita.iam.models.Identity;
 import fr.epita.iam.services.Dao;
 
+/**
+ * Servlet for deleting selected identity
+ * from the SEARCH page. If no identity is
+ * selected, the method is ended as well as 
+ * when the user is trying to delete himself.
+ * If all is correct, the identity is deleted
+ * and user is redirected onto the welcome page.
+ * @author ohajek
+ *
+ */
 @WebServlet(name="DeleteServlet", urlPatterns={"/delete"})
 public class DeleteServlet extends HttpServlet {
 	
